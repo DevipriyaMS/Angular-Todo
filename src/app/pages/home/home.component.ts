@@ -2,16 +2,9 @@ import { Component } from '@angular/core';
 import {SelectionModel} from '@angular/cdk/collections';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { HttpClient } from '@angular/common/http';
 import { ApiService } from '../../services/api.service';
 import { NgClass } from '@angular/common';
-
-export interface Todo {
-  userid: number,
-  id: number;
-  title: string;
-  completed: boolean;
-}
+import { Todo } from '../../models/todo.interface';
 
 @Component({
   selector: 'app-home',
